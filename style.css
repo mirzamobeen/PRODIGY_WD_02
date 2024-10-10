@@ -1,0 +1,121 @@
+/* CSS Reset for consistent rendering across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    font-family: Arial, sans-serif; /* Fallback for cross-browser font support */
+}
+
+.container {
+    text-align: center;
+}
+
+.title {
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 30px;
+    -webkit-animation: bounce 2s infinite; /* WebKit prefix for older Safari */
+    animation: bounce 2s infinite;
+}
+
+/* Keyframes for bounce animation */
+@-webkit-keyframes bounce {
+    0%, 100% { -webkit-transform: translateY(0); }
+    50% { -webkit-transform: translateY(-10px); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Stopwatch box styling */
+.stopwatch {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin: 0 auto;
+}
+
+/* Display styling */
+.display {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 20px;
+    background: #ffcc00;
+    border-radius: 10px;
+    padding: 10px 20px;
+    -webkit-animation: pulse 1s infinite; /* WebKit prefix for older Safari */
+    animation: pulse 1s infinite;
+}
+
+/* Pulse animation for time display */
+@-webkit-keyframes pulse {
+    0%, 100% { background-color: #ffcc00; }
+    50% { background-color: #ffdd44; }
+}
+
+@keyframes pulse {
+    0%, 100% { background-color: #ffcc00; }
+    50% { background-color: #ffdd44; }
+}
+
+/* Button and controls styling */
+.controls {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #28a745;
+    color: rgb(131, 60, 60);
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Lap list styling */
+#laps {
+    list-style: none;
+    padding: 0;
+}
+
+#laps li {
+    background: #007bff;
+    color: white;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#laps li:hover {
+    background-color: #0056b3;
+}
